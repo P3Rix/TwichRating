@@ -109,7 +109,7 @@ public class StreamerService {
             video.setTwitch_id(jsonVideo.get(VideoConstants.FIELD_USER_ID).getAsLong());
 
             try {
-                Date date = new SimpleDateFormat("dd/MM/yyyy").parse(jsonVideo.get(
+                Date date = new SimpleDateFormat("yyyy-MM-dd").parse(jsonVideo.get(
                         VideoConstants.FIELD_CREATED_AT).getAsString());
                 video.setCreate_at(date);
             } catch (ParseException e) {
